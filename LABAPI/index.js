@@ -106,7 +106,7 @@ app.delete("/incidents/:id", async (req, res) => {
         return res.status(404).json({ error: "Incidente no encontrado" });
       }
 
-
+      res.status(200).json({ message: "Incidente eliminado correctamente"});
       
     } catch (err) {
       console.error("Error al eliminar el incidente:", err);
@@ -120,3 +120,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
