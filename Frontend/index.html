@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Incidentes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gestión de Incidentes</h1>
+      <p class="subheading">Gestione y rastree los incidentes de su sistema</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Sección de formulario a la izquierda -->
+      <section id="form-section" class="form-section">
+        <h2>Crear Nuevo Incidente</h2>
+        <form id="incident-form" class="incident-form">
+          <label for="reporter">Reportado por</label>
+          <input type="text" id="reporter" placeholder="Nombre del usuario" required>
+
+          <label for="description">Descripción</label>
+          <input type="text" id="description" placeholder="Descripción del incidente" required>
+
+          <button type="submit">Crear Incidente</button>
+        </form>
+      </section>
+
+      <!-- Sección de lista de incidentes a la derecha -->
+      <section id="list-section" class="list-section">
+        <h2>Listado de Incidentes</h2>
+        <div class="incident-card">
+          <p><strong>Juan Pérez</strong> - Internet caído</p>
+          <p>Estado: <span class="status pendiente">Pendiente</span></p>
+          <button class="btn delete">Eliminar</button>
+          <button class="btn update">Actualizar Estado</button>
+        </div>
+
+        <div class="incident-card">
+          <p><strong>Ana López</strong> - Sin electricidad</p>
+          <p>Estado: <span class="status resuelto">Resuelto</span></p>
+          <button class="btn delete">Eliminar</button>
+          <button class="btn update">Actualizar Estado</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
